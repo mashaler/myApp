@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <table class="table table-bordered table-success">
+      <thead>
+          <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Title</th>
+              <th scope="col">Price</th>
+              <th scope="col">Description</th>
+              <th scope="col">Category</th>
+              <th scope="col">Rating</th>
+          </tr>
+      </thead>
+      <tbody>
+          <ng-container *ngFor="let result of results">
+              <tr>
+                  <th scope="row">{{ result.id }}</th>
+                  <td>{{ result.title }}</td>
+                  <td>{{ result.price }}</td>
+                  <td>{{ result.description }}</td>
+                  <td>{{ result.category }}</td>
+                  <td>{{ result.rating['rate'] }}</td>
+              </tr>
+          </ng-container>
+      </tbody>
+  </table>
+</div>
